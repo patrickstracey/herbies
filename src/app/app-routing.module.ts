@@ -5,9 +5,9 @@ import { BlogIndexComponent } from 'src/modules/blog/blog-index/blog-index.compo
 import { BlogPostComponent } from 'src/modules/blog/blog-post/blog-post.component';
 
 const routes: Routes = [
-  { path: 'post/:id/edit', component: BlogFormComponent },
+  { path: 'post/:uuid/edit', component: BlogFormComponent },
   { path: 'post/create', component: BlogFormComponent },
-  { path: 'post/:id', component: BlogPostComponent },
+  { path: 'post/:uuid', component: BlogPostComponent },
   { path: '', component: BlogIndexComponent },
 ];
 
