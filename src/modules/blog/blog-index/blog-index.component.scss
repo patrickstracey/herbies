@@ -1,0 +1,27 @@
+.post-preview {
+  margin-bottom: 16px;
+  cursor: pointer;
+  border-radius: 12% 0 0 12%;
+}
+
+.post-preview:hover {
+  img {
+    border-color: blue;
+  }
+}
+
+.img {
+  height: 20vw;
+  width: 20vw;
+  margin-right: 16px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-right: 3px solid;
+    //border-left: 4px solid;
+    border-color: palevioletred;
+    border-radius: 12% 0 0 12%;
+  }
+}
