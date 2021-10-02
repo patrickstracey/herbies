@@ -1,1 +1,12 @@
-<p>blog-index works!</p>
+<a *ngFor="let post of posts" routerLink="/post/{{ post.uuid }}">
+  <div class="post-preview row">
+    <div class="img">
+      <img src="{{ post.heroImage }}" alt="" />
+    </div>
+    <div class="details">
+      <h2>{{ post.title }}</h2>
+      <p class="author">by {{ post.author }}</p>
+      <p class="published">{{ post.published | date: "fullDate" }}</p>
+    </div>
+  </div>
+</a>
