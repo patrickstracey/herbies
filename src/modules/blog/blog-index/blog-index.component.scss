@@ -3,6 +3,10 @@
   border-radius: 12% 0 0 12%;
 }
 
+.details {
+  width: 70%;
+}
+
 .post-preview:hover {
   img {
     border-color: blue;
@@ -10,8 +14,9 @@
 }
 
 .img {
-  height: 20vw;
-  width: 20vw;
+  width: 25%;
+  max-height: 260px;
+  max-width: 260px;
   margin-right: 16px;
 
   img {
