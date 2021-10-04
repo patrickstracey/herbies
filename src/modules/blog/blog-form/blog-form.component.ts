@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BlogPostInterface } from '../blog-post.interface';
-import { BLOG_POSTS } from '../blog.mock-data';
+import { BlogPostService } from '../blog-post.service';
 
 @Component({
   selector: 'app-blog-form',
@@ -13,7 +13,12 @@ export class BlogFormComponent implements OnInit {
   blogPostForm!: FormGroup;
   blogPost: BlogPostInterface | undefined;
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute) {}
+  constructor(
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private blogService: BlogPostService
+  ) {}
 
   ngOnInit(): void {
     this.buildForm();
@@ -33,7 +38,7 @@ export class BlogFormComponent implements OnInit {
   }
 
   setupBlogPostEdit(uuid: string) {
-    const result = BLOG_POSTS.find((post) => post.uuid == uuid);
+    const result = this.blogService.getBlogPost(uuid);
     if (result) {
       this.blogPost = result;
       this.patchForm(result);
@@ -54,19 +59,20 @@ export class BlogFormComponent implements OnInit {
 
     if (this.blogPostForm.valid) {
       const result = {
-        title: this.blogPostForm?.value.title,
-        author: this.blogPostForm?.value.author,
-        heroImg: this.blogPostForm?.value.imageUrl
-          ? this.blogPostForm?.value.imageUrl
+        title: this.blogPostForm.value.title,
+        author: this.blogPostForm.value.author,
+        heroImage: this.blogPostForm.value.imageUrl
+          ? this.blogPostForm.value.imageUrl
           : null,
-        body: this.blogPostForm?.value.post,
+        body: this.blogPostForm.value.body,
         published: new Date(),
-        uuid: this.blogPost
-          ? this.blogPost.uuid
-          : (Math.random() + 1).toString(36).substring(2),
+        uuid: this.blogPost ? this.blogPost.uuid : '',
       };
       console.log(result);
-      return result;
+      this.blogPost
+        ? this.blogService.patchBlogPost(result)
+        : this.blogService.createBlogPost(result);
+      this.router.navigate(['']);
     }
 
     return;
