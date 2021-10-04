@@ -4,3 +4,14 @@
   background-color: white;
   min-height: 98vh;
 }
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  a {
+    margin-left: 16px;
+  }
+}
