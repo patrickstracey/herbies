@@ -4,9 +4,6 @@
   </p>
   <div class="hero">
     <button class="button edit" routerLink="edit">Edit Post</button>
-    <div class="img" *ngIf="post.heroImage">
-      <img src="{{ post.heroImage }}" alt="" />
-    </div>
     <div class="title">
       <h1>
         <span>
@@ -14,6 +11,9 @@
         </span>
       </h1>
       <span class="author">by {{ post.author }}</span>
+    </div>
+    <div class="img" *ngIf="post.heroImage">
+      <img src="{{ post.heroImage }}" alt="" />
     </div>
   </div>
 

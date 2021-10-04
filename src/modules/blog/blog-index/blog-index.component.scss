@@ -19,7 +19,7 @@
 }
 
 .post-preview:hover {
-  img {
+  .img {
     border-color: blue;
   }
 }
@@ -29,13 +29,15 @@
   max-height: 260px;
   max-width: 260px;
   margin-right: 16px;
+  background-color: gainsboro;
+  border-radius: 15px 0 0 15px;
+  border-right: 3px solid;
+  border-color: palevioletred;
 
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-right: 3px solid;
-    border-color: palevioletred;
     border-radius: 15px 0 0 15px;
   }
 }

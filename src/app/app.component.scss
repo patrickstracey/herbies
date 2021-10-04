@@ -8,10 +8,22 @@
 .header {
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
+
+  h1 {
+    margin: unset;
+    cursor: pointer;
+  }
 }
 
 .nav {
   a {
     margin-left: 16px;
+    text-decoration: none;
+    color: palevioletred;
+  }
+
+  a:hover {
+    color: blue;
   }
 }
