@@ -1,18 +1,21 @@
-<p class="published">
-  {{ post.published | date: "fullDate" }}
-</p>
-<div class="hero">
-  <div class="img">
-    <img src="{{ post.heroImage }}" alt="" />
+<ng-container *ngIf="post">
+  <p class="published">
+    {{ post.published | date: "fullDate" }}
+  </p>
+  <div class="hero">
+    <button class="button edit" routerLink="edit">Edit Post</button>
+    <div class="img" *ngIf="post.heroImage">
+      <img src="{{ post.heroImage }}" alt="" />
+    </div>
+    <div class="title">
+      <h1>
+        <span>
+          {{ post.title }}
+        </span>
+      </h1>
+      <span class="author">by {{ post.author }}</span>
+    </div>
   </div>
-  <div class="title">
-    <h1>
-      <span>
-        {{ post.title }}
-      </span>
-    </h1>
-    <span class="author">by {{ post.author }}</span>
-  </div>
-</div>
 
-<p class="body">{{ post.body }}</p>
+  <p class="body">{{ post.body }}</p>
+</ng-container>

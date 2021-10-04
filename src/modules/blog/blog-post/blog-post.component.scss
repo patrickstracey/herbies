@@ -2,6 +2,12 @@
   white-space: pre-wrap;
 }
 
+.edit {
+  position: absolute;
+  top: 18%;
+  right: 10%;
+}
+
 .published {
   text-align: center;
 }
@@ -13,6 +19,7 @@
   .img {
     width: 100%;
     height: 100%;
+    background-color: palevioletred;
 
     img {
       width: 100%;
