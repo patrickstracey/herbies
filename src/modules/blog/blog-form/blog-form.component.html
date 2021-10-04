@@ -1,1 +1,64 @@
-<p>blog-form works!</p>
+<form [formGroup]="blogPostForm" (ngSubmit)="submitForm()" class="column">
+  <label for="title">Title *</label>
+  <input
+    type="text"
+    formControlName="title"
+    id="title"
+    [ngClass]="{
+      'active-error':
+        blogPostForm.controls.title.touched &&
+        blogPostForm.controls.title.errors
+    }"
+  />
+  <span
+    class="error"
+    *ngIf="
+      blogPostForm.controls.title.touched && blogPostForm.controls.title.errors
+    "
+    >This field is required</span
+  >
+
+  <label for="author">Author *</label>
+  <input
+    type="text"
+    formControlName="author"
+    id="author"
+    [ngClass]="{
+      'active-error':
+        blogPostForm.controls.author.touched &&
+        blogPostForm.controls.author.errors
+    }"
+  />
+  <span
+    class="error"
+    *ngIf="
+      blogPostForm.controls.author.touched &&
+      blogPostForm.controls.author.errors
+    "
+    >This field is required</span
+  >
+
+  <label for="imageUrl">Image URL</label>
+  <input type="text" formControlName="imageUrl" id="imageUrl" />
+
+  <label for="body">Body *</label>
+  <textarea
+    type="text"
+    formControlName="body"
+    id="body"
+    rows="18"
+    [ngClass]="{
+      'active-error':
+        blogPostForm.controls.body.touched && blogPostForm.controls.body.errors
+    }"
+  ></textarea>
+  <span
+    class="error"
+    *ngIf="
+      blogPostForm.controls.body.touched && blogPostForm.controls.body.errors
+    "
+    >This field is required</span
+  >
+
+  <button type="submit" id="submit-btn">Submit</button>
+</form>

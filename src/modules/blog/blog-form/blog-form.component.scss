@@ -1,0 +1,36 @@
+input,
+textarea {
+  border: 2px solid grey;
+  border-radius: 6px;
+  min-height: 24px;
+  font-size: 16px;
+  padding: 4px;
+}
+
+label {
+  margin-top: 16px;
+}
+
+.error {
+  color: palevioletred;
+  font-size: 14px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
+.active-error {
+  border-color: palevioletred;
+}
+
+#submit-btn {
+  width: 100px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 16px;
+  align-self: center;
+  border: 0px;
+  background-color: palevioletred;
+  color: white;
+  cursor: pointer;
+  margin-top: 16px;
+}
