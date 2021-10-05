@@ -10,9 +10,14 @@
   align-items: center;
   margin-bottom: 24px;
 
-  h1 {
+  .logo {
     margin: unset;
     cursor: pointer;
+    color: var(--main-color);
+  }
+
+  .logo:hover {
+    color: var(--secondary-color);
   }
 }
 
@@ -20,10 +25,10 @@
   a {
     margin-left: 16px;
     text-decoration: none;
-    color: palevioletred;
+    color: var(--main-color);
   }
 
   a:hover {
-    color: blue;
+    color: var(--secondary-color);
   }
 }

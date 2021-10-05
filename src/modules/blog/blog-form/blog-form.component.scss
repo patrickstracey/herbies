@@ -12,14 +12,14 @@ label {
 }
 
 .error {
-  color: palevioletred;
+  color: var(--accent-color);
   font-size: 14px;
   padding-top: 4px;
   padding-left: 4px;
 }
 
 .active-error {
-  border-color: palevioletred;
+  border-color: var(--accent-color);
 }
 
 #submit-btn {

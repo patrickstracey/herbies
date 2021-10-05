@@ -2,11 +2,12 @@
   margin-bottom: 16px;
   border-radius: 15px;
   justify-content: center;
-  border: 1px dashed gainsboro;
+  border: 1px dashed var(--grey);
 }
 
 .post-create:hover {
-  border-color: blue;
+  border-color: var(--secondary-color);
+  border-style: solid;
 }
 
 .post-preview {
@@ -20,7 +21,7 @@
 
 .post-preview:hover {
   .img {
-    border-color: blue;
+    border-color: var(--secondary-color);
   }
 }
 
@@ -29,10 +30,10 @@
   max-height: 260px;
   max-width: 260px;
   margin-right: 16px;
-  background-color: gainsboro;
+  background-color: var(--grey);
   border-radius: 15px 0 0 15px;
   border-right: 3px solid;
-  border-color: palevioletred;
+  border-color: var(--main-color);
 
   img {
     height: 100%;

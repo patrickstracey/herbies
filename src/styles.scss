@@ -1,3 +1,10 @@
+:root {
+  --main-color: #18355e;
+  --secondary-color: #83cbd9;
+  --accent-color: #b3639e;
+  --grey: gainsboro;
+}
+
 body {
   //background-color: antiquewhite;
   margin: unset;
@@ -9,14 +16,14 @@ body {
   border-radius: 6px;
   font-size: 16px;
   border: 0px;
-  background-color: palevioletred;
+  background-color: var(--main-color);
   color: white;
   cursor: pointer;
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: blue;
+  background-color: var(--secondary-color);
 }
 
 .row {
