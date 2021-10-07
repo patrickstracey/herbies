@@ -40,8 +40,10 @@
     }
 
     h1 {
-      margin: unset;
+      margin-top: unset;
+      margin-bottom: -1px;
       border-left: 8px solid white;
+      font-family: var(--body);
     }
 
     span {
@@ -49,4 +51,8 @@
       padding-right: 8px;
     }
   }
+}
+
+.published {
+  color: var(--main-color);
 }
