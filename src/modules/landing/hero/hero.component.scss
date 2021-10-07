@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+
+.circle {
+  height: 45vh;
+  width: 45vh;
+  background-color: var(--secondary-color);
+  border-radius: 100%;
+  margin-right: 18px;
+}
+
+.column {
+  justify-content: center;
+  max-width: 60%;
+}
+
+.hero-header {
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 4.5vw;
+  color: var(--main-color);
+  margin: unset;
+}
+
+.hero-text {
+  font-size: 1.5vw;
+  color: var(--accent-color);
+}
+
+.main {
+  margin-top: 36px;
+  justify-content: space-around;
+}
+
+.shop-now-btn {
+  padding: 8px 24px;
+  margin-top: 24px;
+  border: 4px solid var(--secondary-color);
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+  background-color: var(--main-color);
+  align-self: flex-end;
+}
+
+.shop-now-btn:hover {
+  border-color: var(--accent-color);
+}

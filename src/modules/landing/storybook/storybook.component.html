@@ -1,0 +1,12 @@
+<div
+  class="story-item row"
+  *ngFor="let story of stories; let i = index"
+  [ngClass]="{ reverse: i % 2 != 0 }"
+>
+  <div class="column">
+    <h2>{{ story.title }}</h2>
+    <p>{{ story.body }}</p>
+    <a href="{{ story.url }}" class="more-btn">{{ story.buttonText }}</a>
+  </div>
+  <img class="story-img" src="{{ story.image }}" alt="" />
+</div>
